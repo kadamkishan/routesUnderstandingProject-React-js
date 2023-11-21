@@ -4,6 +4,8 @@ import LoginForm from "./LoginForm"
 import SignupForm from "./SignupForm"
 
 const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
+
+    // console.log(formtype);
   return (
     <div>
         <div>
@@ -13,7 +15,8 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
                 <span>{desc2}</span>
             </p>
 
-            {formtype==="signup" ? (<SignupForm/>) :(<LoginForm/>)}
+            {formtype==="signup" ?(<SignupForm setIsLoggedIn={setIsLoggedIn}/>) :
+                (<LoginForm setIsLoggedIn={setIsLoggedIn}/>)}
             
             <div>
                 <div></div>
